@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: zap-api-scan
+spec:
+  schedule: "*/2 * * * *"
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 120
+      template:
+        spec:
+          containers:
+            - name: zap-api-scan
+              image: "owasp/zap2docker-stable:2.10.0"
+              args: [ "zap-api-scan.py",
+                      "-t", "http://iso27001-service.default.svc.cluster.local:8080/openapi/",
+                      "-f", "openapi",
+                      "-l", "INFO",
+                      "-I"
+                    ]
+          restartPolicy: Never

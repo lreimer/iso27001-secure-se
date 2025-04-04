@@ -1,8 +1,8 @@
-package de.qaware.demo;
+package de.qaware.cloud;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
-class GreetingResourceIT extends GreetingResourceTest {
+class NvdResourceIT extends NvdResourceTest {
     // Execute the same tests but in packaged mode.
 }

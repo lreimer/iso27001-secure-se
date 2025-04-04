@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iso27001-service
+  labels:
+    type: microservice
+spec:
+  selector:
+    app: iso27001-service
+  type: ClusterIP
+  sessionAffinity: None
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: http

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iso27001-service
+  labels:
+    type: microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iso27001-service
+  template:
+    metadata:
+      labels:
+        app: iso27001-service
+    spec:
+      containers:
+      - name: iso27001-service
+        image: iso27001-service
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "0.5"
+          limits:
+            memory: "512Mi"
+            cpu: "2"
+        ports:
+          - name: http
+            containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: application-configmap

@@ -1,20 +1,21 @@
-package de.qaware.demo;
+package de.qaware.cloud;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 @QuarkusTest
-class GreetingResourceTest {
+class NvdResourceTest {
     @Test
-    void testHelloEndpoint() {
+    void testGetCve() {
         given()
-          .when().get("/hello")
+          .when().get("/api/cves/CVE-2021-44228")
           .then()
              .statusCode(200)
-             .body(is("Hello from Quarkus REST"));
+             .body(is(notNullValue()));
     }
 
 }

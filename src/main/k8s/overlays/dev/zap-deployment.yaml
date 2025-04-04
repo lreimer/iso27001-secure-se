@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    type: zap-gui
+  name: zap-gui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: zap-gui
+  template:
+    metadata:
+      labels:
+        type: zap-gui
+    spec:
+      containers:
+        - name: ap-webswing
+          image: "owasp/zap2docker-stable:2.10.0"
+          args: ['zap-webswing.sh']
+          ports:
+            - containerPort: 8080
+            - containerPort: 8090

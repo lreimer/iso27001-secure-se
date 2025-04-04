@@ -1,15 +1,15 @@
-package de.qaware.demo;
+package de.qaware.cloud;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Liveness;
 
 @Liveness
-public class MyLivenessCheck implements HealthCheck {
+public class LivenessCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-        return HealthCheckResponse.up("alive");
+        return HealthCheckResponse.up("application");
     }
 
 }
