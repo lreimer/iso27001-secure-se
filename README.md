@@ -1,9 +1,10 @@
-# Mapping ISO 27001 to Modern Software Engineering
 # Engineering Trust: Integrating Security into Your Modern SDLC
 
-See [Presentation: Mapping ISO 27001 to Modern Software Engineering: Secure by Design](https://jfokus.se/talks/2316)
-
 See [Presentation: Engineering Trust: Integrating Security into Your Modern SDLC](https://oredev.org/program/647c84a5-1a13-4641-8d8f-49109cadf78b)
+
+# Mapping ISO 27001 to Modern Software Engineering
+
+See [Presentation: Mapping ISO 27001 to Modern Software Engineering: Secure by Design](https://jfokus.se/talks/2316)
 
 In today's increasingly complex digital landscape, security is no longer an afterthought but a foundational pillar of software engineering. Achieving ISO 27001 certification has become essential for many organizations striving to build trust, minimize risks, and ensure regulatory compliance. In this talk, we will explore why this certification is so crucial for software companies and delve into the specifics of ISO 27001 controls (especially clause A.8) that focus on secure development. We will map these security requirements onto a modern Software Development Lifecycle (SDLC), highlighting practical approaches that integrate nicely with agile frameworks and DevOps principles.
 
