@@ -1,10 +1,13 @@
 # Mapping ISO 27001 to Modern Software Engineering
+# Engineering Trust: Integrating Security into Your Modern SDLC
+
+See [Presentation: Mapping ISO 27001 to Modern Software Engineering: Secure by Design](https://jfokus.se/talks/2316)
+
+See [Presentation: Engineering Trust: Integrating Security into Your Modern SDLC](https://oredev.org/program/647c84a5-1a13-4641-8d8f-49109cadf78b)
 
 In today's increasingly complex digital landscape, security is no longer an afterthought but a foundational pillar of software engineering. Achieving ISO 27001 certification has become essential for many organizations striving to build trust, minimize risks, and ensure regulatory compliance. In this talk, we will explore why this certification is so crucial for software companies and delve into the specifics of ISO 27001 controls (especially clause A.8) that focus on secure development. We will map these security requirements onto a modern Software Development Lifecycle (SDLC), highlighting practical approaches that integrate nicely with agile frameworks and DevOps principles.
 
 Furthermore, we will explore a range of tools, such as static analysis software, dependency scanners, automated deployment checks and many more to effectively meet ISO standards. We will also discuss how to adopt and integrate OWASP SAMM (Software Assurance Maturity Model) into the development process as a way to continuously assess and improve the security posture of your projects, ensuring that security becomes a continuous, iterative effort within your teams and your organization.
-
-See [Presentation: Mapping ISO 27001 to Modern Software Engineering: Secure by Design](https://jfokus.se/talks/2316)
 
 ## Usage
 
@@ -18,7 +21,7 @@ http get localhost:8080/openapi/
 http get localhost:8080/api/cves/CVE-2021-44228
 ```
 
-## Google ErrorProne
+### Google ErrorProne
 
 Find common programming mistakes early during development as part of the Java compile phase.
 See https://errorprone.info
@@ -40,7 +43,7 @@ tasks.named("compileJava").configure {
 }
 ```
 
-## SonarCloud Security Analysis
+### SonarCloud Security Analysis
 
 Sonar can detect 54 security vulnerabilities and 38 security hotspots using static code analysis.
 See https://rules.sonarsource.com/java/type/Vulnerability
@@ -70,7 +73,7 @@ sonar {
 See https://sonarcloud.io/project/overview?id=lreimer_iso27001-secure-se
 Also, it can easily be integrated into your CI build as well as your IDE (e.g. VS Code) using SonarLint.
 
-## Docker Image Vulnerability Scanning
+### Docker Image Vulnerability Scanning
 
 Several suitable tools can be used to scan your Docker images for vulnerable OS packages and
 other software components.
@@ -95,7 +98,7 @@ trivy image -s HIGH,CRITICAL iso27001-service:1.0.0
 snyk container test --file=Dockerfile iso27001-service:1.0.0
 ```
 
-## Kubernetes Security Scanning
+### Kubernetes Security Scanning
 
 Many security misconfigurations are possible when deploying Kubernetes workloads.
 Most can be found easily via static code analysis using different tools.
@@ -123,7 +126,7 @@ trivy src/main/k8s -n default --report summary all
 trivy src/main/k8s -n default --report all all
 ```
 
-## Terraform Security Scanning
+### Terraform Security Scanning
 
 Many security misconfigurations of your cloud infrastructure are possible when working with Terraform.
 Most can be found easily via static code analysis using different tools.
@@ -143,7 +146,7 @@ checkov --directory src/main/terraform/
 snyk iac test src/main/terraform/
 ```
 
-## Continuous Developer Experience
+### Continuous Developer Experience
 
 The linters and static analysis tools are ideally run before and with every Git commit and push.
 
@@ -160,7 +163,7 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-## Continuous Integration
+### Continuous Integration
 
 GitHub and many other platforms provide CI and security integration functionality that can be used.
 
@@ -168,6 +171,10 @@ GitHub and many other platforms provide CI and security integration functionalit
 # see https://github.com/lreimer/iso27001-secure-se/actions
 # see https://github.com/lreimer/iso27001-secure-se/actions/new?category=security
 ```
+
+### AI Augmented Security Reviews
+
+
 
 ## Maintainer
 
