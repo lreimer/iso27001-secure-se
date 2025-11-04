@@ -188,6 +188,18 @@ GitHub Copilot or maybe Claude Code or any other AI coding agent can help to wri
 # see .github/workflows/claude.yml
 ```
 
+### ZAP - API Scan
+
+The ZAP API scan is a script that is available in the ZAP Docker images. It is tuned for performing scans against APIs defined by OpenAPI, SOAP, or GraphQL via either a local file or a URL.
+
+```bash
+# see https://www.zaproxy.org/docs/docker/api-scan/
+docker pull owasp/zap2docker-weekly  
+docker run -t owasp/zap2docker-weekly zap-api-scan.py \  
+    -t http://localhost:8080/openapi/ \
+    -f openapi \
+    -l INFO
+```
 
 ## Maintainer
 
