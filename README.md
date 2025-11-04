@@ -174,6 +174,19 @@ GitHub and many other platforms provide CI and security integration functionalit
 
 ### AI Augmented Security Reviews
 
+GitHub Copilot or maybe Claude Code or any other AI coding agent can help to write secure code if instructed properly. These can also help to perform security reviews.
+
+```bash
+# Github Copilot can be customized using instructions, prompts and chat modes
+# see .github/instructions/
+# see .github/prompts/
+# see .github/chatmodes/
+
+# Claude Code also provides Github actions to perform code reviews
+# install the actions using the /install-github-app command on the Claude terminal
+# see .github/workflows/claude-code-review.yml
+# see .github/workflows/claude.yml
+```
 
 
 ## Maintainer
