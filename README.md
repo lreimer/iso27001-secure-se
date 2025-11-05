@@ -191,9 +191,7 @@ GitHub Copilot or maybe Claude Code or any other AI coding agent can help to wri
 
 ### SBOM (Software Bill of Materials)
 
-Generating an SBOM (Software Bill of Materials) and SPDX document (`build/spdx/release.spdx.json`) for this repository serves several ISO 27001 security and compliance purposes.
-
-The SPDX format is an ISO/IEC standard (5962:2021), making it ideal for ISO 27001 compliance documentation.
+Generating an SBOM (Software Bill of Materials) and SPDX document for this repository serves several ISO 27001 security and compliance purposes. The SPDX format is an ISO/IEC standard (5962:2021), making it ideal for ISO 27001 compliance documentation, see `build/spdx/release.spdx.json`
 
 **Security & Risk Management (ISO 27001 A.8.9, A.8.31)**
 - *Vulnerability tracking*: Quickly identify if your dependencies contain known CVEs
