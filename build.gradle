@@ -5,6 +5,7 @@ plugins {
     id "net.ltgt.errorprone" version "3.1.0"
 	id "jacoco"
 	id "org.sonarqube" version "6.0.1.5171"
+    id "org.spdx.sbom" version "0.9.0"
 }
 
 repositories {
@@ -62,5 +63,24 @@ sonar {
     property "sonar.projectKey", "lreimer_iso27001-secure-se"
     property "sonar.organization", "lreimer"
     property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+spdxSbom {
+  targets {
+    // create a target named "release",
+    // this is used for the task name (spdxSbomForRelease)
+    // and output file (release.spdx.json)
+    create("release") {
+        scm {
+            uri.set("https://github.com/lreimer/iso27001-secure-se.git")
+        }    
+
+        document {
+            name.set("Example SPDX document")
+            namespace.set("https://qaware.de/spdx/3f8b7a2e-4c1d-4b5e-9a7f-2d6e8f1c4b3a")
+            creator.set("Person:Mario-Leander Reimer")
+        }
+    }
   }
 }

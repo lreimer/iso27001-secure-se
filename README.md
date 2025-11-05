@@ -189,6 +189,30 @@ GitHub Copilot or maybe Claude Code or any other AI coding agent can help to wri
 # see .github/workflows/claude.yml
 ```
 
+### SBOM (Software Bill of Materials)
+
+Generating an SBOM (Software Bill of Materials) and SPDX document (`build/spdx/release.spdx.json`) for this repository serves several ISO 27001 security and compliance purposes.
+
+The SPDX format is an ISO/IEC standard (5962:2021), making it ideal for ISO 27001 compliance documentation.
+
+**Security & Risk Management (ISO 27001 A.8.9, A.8.31)**
+- *Vulnerability tracking*: Quickly identify if your dependencies contain known CVEs
+- *Supply chain security*: Know exactly what third-party components are in your software
+- *License compliance*: Track all open-source licenses to avoid legal risks
+- *Dependency transparency*: Document all transitive dependencies for security audits
+
+**ISO 27001 A.8.30 & A.8.31 Requirements**
+- *Change management*: Track what components changed between releases
+- *Configuration management*: Maintain accurate inventory of software components
+- *Security assessment*: Enable automated scanning of known vulnerable components
+- *Audit trail*: Provide evidence of secure development practices
+
+```bash
+./gradlew :spdxSbomForRelease
+# or use the aggregate task spdxSbom to run all sbom tasks
+# ./gradlew :spdxSbom
+```
+
 ### ZAP - API Scan
 
 The ZAP API scan is a script that is available in the ZAP Docker images. It is tuned for performing scans against APIs defined by OpenAPI, SOAP, or GraphQL via either a local file or a URL.
