@@ -22,7 +22,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-arc'
     implementation "io.quarkus:quarkus-rest-client"
 
-    errorprone "com.google.errorprone:error_prone_core:2.19.1"
+    errorprone "com.google.errorprone:error_prone_core:2.42.0"
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
