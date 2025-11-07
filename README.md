@@ -74,6 +74,8 @@ sonar {
 See https://sonarcloud.io/project/overview?id=lreimer_iso27001-secure-se
 Also, it can easily be integrated into your CI build as well as your IDE (e.g. VS Code) using SonarLint.
 
+Also you might want to check out https://github.com/lreimer/sonar-mcp-server 
+
 ### Docker Image Vulnerability Scanning
 
 Several suitable tools can be used to scan your Docker images for vulnerable OS packages and
