@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'clean-code'
 description: 'Review and refactor code in your project according to defined instructions'
 model: Claude Sonnet 4.5 (copilot)
 tools: ['changes', 'search/codebase', 'edit/editFiles', 'problems']

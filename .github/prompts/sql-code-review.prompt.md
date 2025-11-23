@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'security-scout'
 tools: ['changes', 'search/codebase', 'edit/editFiles', 'problems']
 description: 'Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.'
 model: Claude Sonnet 4.5 (copilot)

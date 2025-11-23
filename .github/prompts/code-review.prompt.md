@@ -1,5 +1,5 @@
 ---
-mode: 'agent'
+agent: 'clean-code'
 tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runTests']
 description: 'Do a code review of staged files before committing and pushing your changes.'
 model: Claude Sonnet 4.5 (copilot)
